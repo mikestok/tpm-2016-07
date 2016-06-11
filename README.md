@@ -16,24 +16,24 @@ in the result e.g.
 Perl 5.24.0
 
 ```
-$ time perl5/look-and-say 1321131112 40
+$ time perl5/look_and_say 1321131112 40
 492982
 
-real	0m0.697s
-user	0m0.689s
-sys	0m0.006s
-$ time perl5/look-and-say 1321131112 50
+real	0m0.729s
+user	0m0.712s
+sys	0m0.011s
+$ time perl5/look_and_say 1321131112 50
 6989950
 
-real	0m8.743s
-user	0m8.697s
-sys	0m0.037s
-$ time perl5/look-and-say 1321131112 60
+real	0m9.150s
+user	0m9.041s
+sys	0m0.076s
+$ time perl5/look_and_say 1321131112 60
 99053158
 
-real	2m2.267s
-user	2m1.774s
-sys	0m0.402s
+real	2m7.223s
+user	2m5.779s
+sys	0m0.939s
 ```
 
 ## Resources
