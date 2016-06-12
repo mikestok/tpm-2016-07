@@ -70,4 +70,27 @@ user	13m28.013s
 sys	3m23.371s
 ```
 
+## In Elixir (... a more functional way)
+
+```
+19:33 $ time elixir2/look_and_say 1321131112 40
+492982
+
+real	0m1.724s
+user	0m1.488s
+sys	0m0.325s
+19:33 $ time elixir2/look_and_say 1321131112 50
+6989950
+
+real	0m26.671s
+user	0m22.536s
+sys	0m4.193s
+19:34 $ time elixir2/look_and_say 1321131112 60
+99053158
+
+real	11m1.134s
+user	8m3.324s
+sys	2m33.469s
+```
+
 ## Resources
