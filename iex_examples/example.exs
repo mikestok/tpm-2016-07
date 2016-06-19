@@ -4,6 +4,14 @@ defmodule Example do
   `markdown` so we can do simple formatting.
   """
 
+  # Example.func/1
+  def func(arg), do: func(arg, 0)
+
+  # Example.func/2
+  def func(arg, n) do
+    IO.puts("Called with #{arg} and #{n}")
+  end
+
   @doc """
   Calculate the factorial of a number.
 
@@ -23,7 +31,7 @@ defmodule Example do
       10
   """
   @spec sum([number]) :: number
-  def sum(list), do: sum(list, 0)
+  def sum(l) when is_list(l), do: sum(l, 0)
   defp sum([], acc), do: acc
   defp sum([h | t], acc), do: sum(t, acc + h)
 
