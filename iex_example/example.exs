@@ -38,8 +38,9 @@ defmodule Example do
   @doc """
   Calculate the *n*th Fibonacci number.
 
+      # deliberate error in result...
       iex> Example.fib(20)
-      6765
+      6675
   """
   @spec fib(non_neg_integer) :: non_neg_integer
   def fib(n) when is_integer(n) and n >= 0 do
@@ -49,5 +50,14 @@ defmodule Example do
     |> Enum.take(1)
     |> List.flatten
     |> List.first
+  end
+
+  @doc false
+  # A function which deliberately contains some errors for dialyzer.
+  @spec bad_call(String.t) :: integer
+  def bad_call(string) do
+    string
+    |> String.trim
+    |> fib
   end
 end
