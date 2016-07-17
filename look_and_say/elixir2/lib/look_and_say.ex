@@ -14,7 +14,14 @@ defmodule LookAndSay do
     |> List.first
   end
 
-  defp look_and_say(string) do
+  @doc """
+  Perform the look and say transformation on a string.  For example `1233` is
+  one one, one two, two threes, so it becomes `111223`
+
+      iex> LookAndSay.look_and_say("1233")
+      "111223"
+  """
+  def look_and_say(string) do
     string |> String.to_char_list |> look_and_say([])
   end
   defp look_and_say([], acc) do
