@@ -6,7 +6,7 @@ defmodule LookAndSay do
     |> IO.puts
   end
 
-  defp look_and_say_n_times(string, n) do
+  def look_and_say_n_times(string, n) do
     string
     |> Stream.iterate(&look_and_say/1)
     |> Stream.drop(n)
@@ -14,7 +14,7 @@ defmodule LookAndSay do
     |> List.first
   end
 
-  defp look_and_say(string) do
+  def look_and_say(string) do
     make_result = fn(match, char) -> "#{String.length(match)}#{char}" end
 
     Regex.replace(~r/(.)\1*/, string, make_result)

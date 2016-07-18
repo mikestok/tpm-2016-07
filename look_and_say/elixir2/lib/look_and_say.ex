@@ -6,7 +6,7 @@ defmodule LookAndSay do
     |> IO.puts
   end
 
-  defp look_and_say_n_times(string, n) do
+  def look_and_say_n_times(string, n) do
     string
     |> Stream.iterate(&look_and_say/1)
     |> Stream.drop(n)
