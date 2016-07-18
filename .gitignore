@@ -1,2 +1,4 @@
 # Don't worry about beam files we get when playing with iex & recompiling.
 *.beam
+# Don't track my utility to open all the useful files...
+/open-files
